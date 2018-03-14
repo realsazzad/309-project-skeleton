@@ -3,6 +3,12 @@ var Article = require('./../models/Article.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
+module.exports.createView=function(req,res){
+    res.render('./../public/views/article/new.ejs',{
+    user:req.user || null,
+    request:req
+  });
+}
 module.exports.singleView=function(req,res){
     res.render('./../public/views/article/view.ejs',{
     user:req.user || null,
@@ -39,7 +45,7 @@ module.exports.list = function(req, res) {
   			});
     } else {
       console.log("api called");
-      console.log(data);
+      
       res.status(200).send(data);
     }
   });

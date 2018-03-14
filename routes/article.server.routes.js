@@ -16,6 +16,7 @@ module.exports = function(app){
 	.put(users.requiresLogin, articles.update);
 app.route('/articles/all').get(articles.listview);
 app.route('/article/:articleId').get(articles.singleView);
+app.route('/articles/new').get(articles.createView);
 
 app.param('articleId', articles.articleByID);
 
