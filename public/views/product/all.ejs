@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            All Products
+        </title>
+        <body>
+            <h2>List of all Products</h2>
+            <% for(var i=0; i<products.length; i++) { %>
+    <h1> <%= products[i].name %> </h1>
+    <p>
+      <%= products[i].user%>
+    </p>
+    <h3><%= products[i].price%></h3>
+    <h3><%= products[i].quantity
+    %></h3>
+     <% }%>
+        </body>
+    </head>
+</html>
